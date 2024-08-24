@@ -1,5 +1,14 @@
 <div class="bg-primary h-full w-full text-secondary">
-  <img class="w-full h-96" src="assets/images/ProjectRenekton-HD.jpg" alt="" />
+  <div
+    id="banner-container"
+    class="w-full h-96 flex flex-col justify-center items-center"
+  >
+    <h2 class="font-extrabold text-5xl">About Me</h2>
+    <p class="font-bold mt-4">
+      I'm Chemical Engineer by profession but, Software Developer by passion!!
+    </p>
+  </div>
+  <!-- <img class="w-full h-96" src="assets/images/ProjectRenekton-HD.jpg" alt="" /> -->
   <div class="flex justify-around gap-6 w-3/5 m-auto mt-8">
     <div>
       <h2 class="font-extrabold text-4xl">This is my story ...</h2>
@@ -15,19 +24,99 @@
     </div>
     <img class="w-64" src="assets/images/IMG-20210418-WA0018.jpg" alt="" />
   </div>
-  <section class="mt-8 border-t border-gray-500 w-4/5 m-auto flex justify-center">
-    <div class="mt-8">
+  <section
+    class="mt-8 border-t border-gray-500 w-4/5 m-auto flex justify-center"
+  >
+    <div class="mt-8 w-4/5">
       <h2 class="font-extrabold text-4xl text-center">Formation</h2>
-      <div class="mt-4 flex gap-6">
-        <input type="radio" id="chem-eng" name="formation" value="opcion1">
-        <label for="chem-eng">Chemical Engineer</label><br>
+      <div class="mt-4 flex justify-evenly">
+        <input
+          class="appearance-none"
+          type="radio"
+          id="chem-eng"
+          name="formation"
+          value="opcion1"
+          checked
+        />
+        <label for="chem-eng">
+          <div class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center">
+            <img
+              class="w-16 h-auto"
+              src="assets/images/Unal.png"
+              alt="National University of Colombia Logo"
+            />
+          </div>
+        </label><br />
 
-        <input type="radio" id="soft-dev" name="formation" value="opcion2">
-        <label for="soft-dev">Software Developer</label><br>
+        <input
+          class="appearance-none"
+          type="radio"
+          id="soft-dev"
+          name="formation"
+          value="opcion2"
+        />
+        <label for="soft-dev">
+          <div class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center">
+            <img
+              class="w-28 h-auto"
+              src="assets/images/DH.png"
+              alt="Digital House Coding School Logo"
+            />
+          </div>
+        </label><br />
 
-        <input type="radio" id="platzi" name="formation" value="opcion3">
-        <label for="platzi">Platzi Academy</label><br>
+        <input
+          class="appearance-none"
+          type="radio"
+          id="platzi"
+          name="formation"
+          value="opcion3"
+        />
+        <label for="platzi">
+          <div class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center">
+            <img
+              class="w-28 h-11"
+              src="assets/images/Platzi-rmbg.png"
+              alt="Platzi Online Academy Logo"
+            />
+          </div>
+        </label><br />
       </div>
+      <div
+        class="mt-4 border rounded border-gray-500 p-2 flex flex-col justify-center items-center bg-stone-900"
+      >
+        <h3 class="font-bold text-lg">Entity Name</h3>
+        <p class="text-sm">Title Obtained</p>
+        <p class="text-sm">Studies Description</p>
+        <p class="text-sm">Jobs Stories</p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mt-8 border-t border-gray-500 w-4/5 m-auto flex flex-col justify-center"
+  >
+    <div class="mt-8">
+      <h2 class="font-extrabold text-4xl text-center">Values</h2>
+    </div>
+    <div class="mt-4 flex gap-6 justify-center">
+      <div>Discipline</div>
+      <div>Ingenuity</div>
+      <div>Pride</div>
+      <div>Tenacity</div>
+    </div>
+  </section>
+  <section
+    class="mt-8 border-t border-gray-500 w-4/5 m-auto flex flex-col justify-center"
+  >
+    <div class="mt-8">
+      <h2 class="font-extrabold text-4xl text-center">Hobbies</h2>
+    </div>
+    <div class="mt-4 flex gap-6 justify-center">
+      <div>Drawing</div>
+      <div>Photography</div>
+      <div>Guitar</div>
+      <div>Motorcycles</div>
+      <div>Video Games</div>
     </div>
   </section>
 </div>
