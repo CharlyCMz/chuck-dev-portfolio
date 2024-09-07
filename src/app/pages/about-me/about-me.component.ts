@@ -37,98 +37,103 @@ export class AboutMeComponent {
     },
   ];
 
-  values= [
+  values = [
     {
       name: 'Discipline',
       imgUrl: '../../../assets/images/auron.jpg',
-      description: '',
+      description: 'Como mi personaje favorito en FFX, Auron me ha enseñado sobre la verdadera dedicación y el compromiso con una causa, entregándose a objetivos más grandes.',
     },
     {
       name: 'Inventiveness',
       imgUrl: '../../../assets/images/megaman.jpg',
-      description: '',
+      description: "There is no character more skilled at handling new skills, tools and knowledge than Megaman's trusty X! He taught me that inventiveness is the best weapon.",
     },
     {
       name: 'Pride',
       imgUrl: '../../../assets/images/vegeta.jpg',
-      description: '',
+      description: 'When we were young we loved Goku but, maturing means accepting that the proud Vegeta is more accurate, he carries each of his visions of life with poise, with conscience but above all he is proud of the person he has become.',
     },
     {
       name: 'Tenacity',
       imgUrl: '../../../assets/images/hellscream.jpg',
-      description: '',
+      description: 'The good Grom Hellscream from WoW, is the image I see when I think about never giving up, that a will must be unbreakable and that no matter the challenge I must continue the path with firmness.',
     },
-  ]
+  ];
 
   hobbies = [
     {
       name: 'Video Games',
-      imgUrl: 'https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: '',
+      imgUrl:
+        'https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description:
+        'Like any 90s kid, I enjoy remembering great moments with my old consoles or trying out the wonders of new games. I like to share this hobby through streaming, feel free to join me in any of my channels!!',
       extra: {
         subTitle: 'Connect with me:',
         links: [
           {
             linkImgUrl: 'src/assets/images/kick.png',
             anchorUrl: 'https://kick.com/chuckgamestw',
-            tooltip: 'Kick Channel'
+            tooltip: 'Kick Channel',
           },
           {
             linkImgUrl: 'src/assets/images/twitch.png',
             anchorUrl: 'https://www.twitch.tv/chuckgames9104',
-            tooltip: 'Twitch Channel'
+            tooltip: 'Twitch Channel',
           },
-        ]
-      }
+        ],
+      },
     },
     {
       name: 'Motorcycles',
-      imgUrl: 'https://images.pexels.com/photos/22845781/pexels-photo-22845781/free-photo-of-a-royal-enfield-gt-650-motorcycle-parked-on-the-pavement.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
-      description: '',
+      imgUrl:
+        'https://images.pexels.com/photos/22845781/pexels-photo-22845781/free-photo-of-a-royal-enfield-gt-650-motorcycle-parked-on-the-pavement.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+      description: 'I have been a motorcyclist for most of my life, and have had the opportunity and fortune to experience all kinds of motorcycles, currently I proudly ride my Continental GT650. Next you will find some of my dream bikes!',
       extra: {
         subTitle: 'My dream bikes:',
         links: [
           {
             linkImgUrl: 'src/assets/images/yamaha.png',
-            anchorUrl: 'https://www.incolmotos-yamaha.com.co/vehiculo/wr450f/8418/',
-            tooltip: 'Todoterreno WR-450'
+            anchorUrl:
+              'https://www.incolmotos-yamaha.com.co/vehiculo/wr450f/8418/',
+            tooltip: 'Todoterreno WR-450',
           },
           {
             linkImgUrl: 'src/assets/images/triumph.png',
             anchorUrl: 'https://triumphcolombia.com/motos/tiger-900-rally/',
-            tooltip: 'Touring/Offroad Tigger 900'
+            tooltip: 'Touring/Offroad Tigger 900',
           },
           {
             linkImgUrl: 'src/assets/images/arch.png',
             anchorUrl: 'https://archmotorcycle.com/arch-krgt-1/',
-            tooltip: 'Hand-Made Keanu Reves Motorcycle'
+            tooltip: 'Hand-Made Keanu Reves Motorcycle',
           },
-        ]
-      }
+        ],
+      },
     },
     {
       name: 'Guitar',
-      imgUrl: 'https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: '',
+      imgUrl:
+        'https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description: "One of my great dreams was always to be an excellent musician, even though I didn't achieve it, the guitar became my channel of expression and following the notes of a good song is today one of my greatest pleasures. Here you got a sample list of my musical taste!!",
       extra: {
         subTitle: "Charly's sounds:",
         links: [
           {
             linkImgUrl: 'src/assets/images/Spotify.png',
-            anchorUrl: 'https://open.spotify.com/playlist/4mGY2MA3ppUieP7Rytk6xX?si=2e4339c82d064fbe',
-            tooltip: 'Spotify playlist for my life soundtrack'
+            anchorUrl:
+              'https://open.spotify.com/playlist/4mGY2MA3ppUieP7Rytk6xX?si=2e4339c82d064fbe',
+            tooltip: 'Spotify playlist for my life soundtrack',
           },
-        ]
-      }
+        ],
+      },
     },
     {
       name: 'Drawing & Photography',
-      imgUrl: 'https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description: '',
+      imgUrl:
+        'https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description: 'These topics have always interested me. I discovered in photography and drawing a way to express my emotions and thoughts and let them flow to share them with others. It is a little escape for new scenarios or even for rainy afternoons at home.',
     },
-  ]
+  ];
 
-  toogleFormation() {
-
-  }
+  toogleFormation() {}
 }
