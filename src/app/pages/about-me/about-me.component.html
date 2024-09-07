@@ -9,26 +9,62 @@
     </p>
   </div>
   <!-- <img class="w-full h-96" src="assets/images/ProjectRenekton-HD.jpg" alt="" /> -->
-  <div class="flex justify-around gap-6 w-3/5 m-auto mt-8">
+  <div class="flex justify-around items-center gap-6 w-3/5 m-auto mt-8">
     <div>
       <h2 class="font-extrabold text-4xl">This is my story ...</h2>
-      <p class="mt-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
+      <div class="mt-4 flex flex-col gap-2 text-base">
+        <p>
+          Hello there!!, I was born in Villavicencio, Colombia, but grew up
+          living in the cities Manizales and Medellín. My curiosity to
+          understand how the world works led me to study chemical engineering, a
+          career that taught me to view things from multiple perspectives.
+        </p>
+        <p>
+          For over 8 years, I worked as a chemical engineer, specializing in
+          water treatment and environmental technologies. This period gave me
+          experience in leadership, project management, and complex
+          problem-solving. I also ventured into various entrepreneurial
+          projects, from craft brewing to environmental consulting. It was in
+          the midst of these projects that I had my first encounters with
+          programming. I used digital tools to solve problems in my work, which
+          sparked my interest in technology.
+        </p>
+        <p>
+          The coronavirus pandemic marked a turning point in my life. Amidst the
+          uncertainty, I secured a scholarship offered by Globant and
+          MercadoLibre to study software development. This opportunity allowed
+          me to change course and immerse myself in the world of programming.
+          Since then, I've worked on various development projects, from local
+          startups to my current position as a full stack developer for an
+          international company.
+        </p>
+        <p>
+          This path has allowed me to combine my engineering experience with my
+          new technology skills. Today, I find myself at an exciting point in my
+          career, integrating my analytical engineering background with the
+          creativity of software development.
+        </p>
+        <p>
+          -- I'm ready to face new challenges and continue growing in the field
+          of technology.
+        </p>
+      </div>
     </div>
-    <img class="w-64" src="assets/images/IMG-20210418-WA0018.jpg" alt="" />
+    <img
+      class="w-80 h-96 border rounded-lg border-gray-500"
+      src="assets/images/IMG-20210418-WA0018.jpg"
+      alt=""
+    />
   </div>
   <section
     class="mt-8 border-t border-gray-500 w-4/5 m-auto flex justify-center"
   >
     <div class="mt-8 w-4/5">
       <h2 class="font-extrabold text-4xl text-center">Formation</h2>
+      <p class="mt-2 text-center">
+        Here you can find more details about my education and some additional
+        information about my experience applying what I learned in each phase.
+      </p>
       <div class="mt-4 flex justify-evenly">
         <input
           class="appearance-none"
@@ -39,14 +75,16 @@
           checked
         />
         <label for="chem-eng">
-          <div class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center">
+          <div
+            class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center"
+          >
             <img
               class="w-16 h-auto"
               src="assets/images/Unal.png"
               alt="National University of Colombia Logo"
             />
-          </div>
-        </label><br />
+          </div> </label
+        ><br />
 
         <input
           class="appearance-none"
@@ -56,14 +94,16 @@
           value="opcion2"
         />
         <label for="soft-dev">
-          <div class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center">
+          <div
+            class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center"
+          >
             <img
               class="w-28 h-auto"
               src="assets/images/DH.png"
               alt="Digital House Coding School Logo"
             />
-          </div>
-        </label><br />
+          </div> </label
+        ><br />
 
         <input
           class="appearance-none"
@@ -73,50 +113,191 @@
           value="opcion3"
         />
         <label for="platzi">
-          <div class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center">
+          <div
+            class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center"
+          >
             <img
               class="w-28 h-11"
               src="assets/images/Platzi-rmbg.png"
               alt="Platzi Online Academy Logo"
             />
-          </div>
-        </label><br />
+          </div> </label
+        ><br />
       </div>
       <div
-        class="mt-4 border rounded border-gray-500 p-2 flex flex-col justify-center items-center bg-stone-900"
+        class="mt-4 border rounded border-gray-500 p-2 flex flex-col gap-2 justify-center items-center bg-stone-900 text-center"
       >
-        <h3 class="font-bold text-lg">Entity Name</h3>
-        <p class="text-sm">Title Obtained</p>
-        <p class="text-sm">Studies Description</p>
-        <p class="text-sm">Jobs Stories</p>
+        <h3 class="font-extrabold text-lg">
+          {{ studies[formationSelected()].entity }}
+        </h3>
+        <p class="font-bold text-base">
+          {{ studies[formationSelected()].title }}
+        </p>
+        <p class="text-sm">{{ studies[formationSelected()].description }}</p>
+        <p class="text-sm">{{ studies[formationSelected()].story }}</p>
       </div>
     </div>
   </section>
   <section
     class="mt-8 border-t border-gray-500 w-4/5 m-auto flex flex-col justify-center"
   >
-    <div class="mt-8">
+    <div class="mt-8 m-auto w-4/5">
       <h2 class="font-extrabold text-4xl text-center">Values</h2>
+      <p class="mt-2 text-center">
+        My values are the foundation on which I build my personal and
+        professional life. These principles guide my decisions, shape my
+        relationships, and define my work ethic.
+      </p>
+      <p class="mt-2 text-center">
+        And here I present you those values as the characters that have been a
+        symbol of this pillars, for me, they are the pure concept of each one of
+        them
+      </p>
     </div>
-    <div class="mt-4 flex gap-6 justify-center">
-      <div>Discipline</div>
-      <div>Ingenuity</div>
-      <div>Pride</div>
-      <div>Tenacity</div>
+    <div class="mt-4 flex gap-8 justify-center">
+      <div id="discipline-value" class="value-card">
+        <h3 class="img-text">Discipline</h3>
+      </div>
+      <div id="inventiveness-value" class="value-card">
+        <h3 class="img-text">Inventiveness</h3>
+      </div>
+      <div id="pride-value" class="value-card">
+        <h3 class="img-text">Pride</h3>
+      </div>
+      <div id="tenacity-value" class="value-card">
+        <h3 class="img-text">Tenacity</h3>
+      </div>
     </div>
   </section>
   <section
     class="mt-8 border-t border-gray-500 w-4/5 m-auto flex flex-col justify-center"
   >
-    <div class="mt-8">
+    <div class="mt-8 m-auto w-4/5">
       <h2 class="font-extrabold text-4xl text-center">Hobbies</h2>
+      <p class="mt-2 text-center">
+        Outside of development, I cultivate a variety of interests that nurture
+        my creativity and balance my life. These passions not only help me
+        recharge my energy, but also enrich my professional outlook.
+      </p>
     </div>
-    <div class="mt-4 flex gap-6 justify-center">
-      <div>Drawing</div>
-      <div>Photography</div>
-      <div>Guitar</div>
-      <div>Motorcycles</div>
-      <div>Video Games</div>
+    <div class="mt-4 m-auto w-4/5 flex flex-col gap-6 justify-center">
+      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
+        <div
+          id="games-hobbie"
+          class="w-64 h-24 hobbies-img border rounded"
+        ></div>
+        <div class="flex flex-col gap-2 w-4/5">
+          <h3 class="font-bold text-xl">Video Games</h3>
+          <p class="text-sm">
+            Like any 90s kid, I enjoy remembering great moments with my old
+            consoles or trying out the wonders of new games. I like to share
+            this hobby through streaming, feel free to join me in any of my
+            channels!!
+          </p>
+        </div>
+        <div class="w-52 flex flex-col justify-center gap-2 text-center">
+          <h3 class="font-bold text-sm">Connect with me:</h3>
+          <div class="flex justify-center gap-2">
+            <button>
+              <a href="https://kick.com/chuckgames"
+                ><img class="w-10 rounded" src="assets/images/kick.png" alt=""
+              /></a>
+            </button>
+            <button>
+              <a href="https://www.twitch.tv/chuckgames9104"
+                ><img class="w-9" src="assets/images/twitch.png" alt=""
+              /></a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
+        <div
+          id="motorcycles-hobbie"
+          class="w-64 h-24 hobbies-img border rounded"
+        ></div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-bold text-xl">Motorcycles</h3>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="w-52 text-center flex flex-col gap-2">
+          <h3 class="font-bold text-sm">My Dream Bikes:</h3>
+          <div class="flex justify-center gap-2">
+            <button>
+              <a href=""
+                ><img
+                  src="assets/images/yamaha.png"
+                  class="w-9 rounded-md"
+                  alt=""
+              /></a>
+            </button>
+            <button>
+              <a href=""
+                ><img
+                  src="assets/images/triumph.png"
+                  class="w-9 rounded-md"
+                  alt=""
+              /></a>
+            </button>
+            <button>
+              <a href=""
+                ><img
+                  src="assets/images/arch.png"
+                  class="w-8 rounded-md"
+                  alt=""
+              /></a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
+        <div
+          id="guitar-hobbie"
+          class="w-64 h-24 hobbies-img border rounded"
+        ></div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-bold text-xl">Guitar</h3>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="w-52 flex flex-col justify-center gap-2">
+          <h3 class="font-bold text-sm">Charly's Sounds:</h3>
+          <div class="flex justify-center gap-2">
+            <button>
+              <a href=""
+                ><img src="assets/images/Spotify.png" class="w-9" alt=""
+              /></a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
+        <div
+          id="draw-hobbie"
+          class="w-64 h-24 hobbies-img border rounded"
+        ></div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-bold text-xl">Drawing & Photography</h3>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="w-52">
+          <h3 class="font-bold text-sm">Connect with me:</h3>
+          <div>
+            <a href=""
+              ><img src="assets/images/twitch.jpg" class="w-10" alt=""
+            /></a>
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

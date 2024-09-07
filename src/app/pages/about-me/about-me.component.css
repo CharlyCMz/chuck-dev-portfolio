@@ -2,6 +2,66 @@
   background-image: url('../../../assets/images/ProjectRenekton-HD.jpg');
 }
 
+#discipline-value {
+  background-image: url('../../../assets/images/auron.jpg');
+}
+
+#tenacity-value {
+  background-image: url('../../../assets/images/hellscream.jpg');
+}
+
+#inventiveness-value {
+  background-image: url('../../../assets/images/megaman.jpg');
+}
+
+#pride-value {
+  background-image: url('../../../assets/images/vegeta.jpg');
+}
+
+.value-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 16rem;
+  height: 20rem;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  background-position: center;
+  background-size: cover;
+}
+
+.img-text {
+  text-shadow: 0 0 0.15em #000000;
+}
+
+#games-hobbie {
+  background-image: url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+#motorcycles-hobbie {
+  background-image: url('https://images.pexels.com/photos/22845781/pexels-photo-22845781/free-photo-of-a-royal-enfield-gt-650-motorcycle-parked-on-the-pavement.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+}
+
+#guitar-hobbie {
+  background-image: url('https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+#draw-hobbie {
+  background-image: url('https://images.pexels.com/photos/1787220/pexels-photo-1787220.jpeg');
+}
+
+.hobbies-img {
+  background-position: center;
+  background-size: cover;
+}
+
 input:checked + label {
   border-radius: 10.4px;
   transform: translateY(-3px);
