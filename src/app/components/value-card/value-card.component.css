@@ -1,0 +1,22 @@
+.value-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 16rem;
+  height: 20rem;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  background-position: center;
+  background-size: cover;
+}
+
+.img-text {
+  text-shadow: 0 0 0.55em #000000;
+}

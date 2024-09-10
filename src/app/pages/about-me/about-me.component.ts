@@ -1,9 +1,13 @@
 import { Component, signal } from '@angular/core';
+import { HobbyCardComponent } from '../../components/hobby-card/hobby-card.component';
+import { Hobby } from '../../models/hobby.model';
+import { Value } from '../../models/value.model';
+import { ValueCardComponent } from '../../components/value-card/value-card.component';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [ValueCardComponent, HobbyCardComponent],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css',
 })
@@ -15,7 +19,7 @@ export class AboutMeComponent {
       entity: 'National University of Colombia',
       title: 'Chemical Engineer',
       description:
-        'My foundation in Chemical Engineering has gifted me with a unique perspective on problem-solving and analytical thinking. This field taught me to approach challenges methodically, balancing creativity with scientific precision – skills that have proven invaluable in my software development career.',
+        'My foundation in Chemical Engineering has gifted me with a unique perspective on problem-solving and analytical thinking. This field taught me to approach challenges methodically, balancing creativity with scientific precision, skills that have proven invaluable in my software development career. It has been more that 8 years of learning.',
       story:
         '8 years of expirience in different fields of the industry, directing production teams of up to 150 people towards the mos challenging situations which includes industrial process design, administration and control, waste water treatment plants optimization and operation, energy suply for process from different sources as coal, gas and other fuelsOver 8 years, I worked across various areas of the chemical industry, leading production teams of up to 150 people through complex challenges. My role involved industrial process design, administration, and control. I gained hands-on experience in optimizing and operating wastewater treatment plants, contributing to environmental protection efforts. Additionally, I managed energy supply for processes, working with diverse sources including coal, gas, and other fuels. This experience sharpened my technical skills, leadership abilities, and adaptability',
     },
@@ -37,11 +41,11 @@ export class AboutMeComponent {
     },
   ];
 
-  values = [
+  values: Value[] = [
     {
       name: 'Discipline',
       imgUrl: '../../../assets/images/auron.jpg',
-      description: 'Como mi personaje favorito en FFX, Auron me ha enseñado sobre la verdadera dedicación y el compromiso con una causa, entregándose a objetivos más grandes.',
+      description: 'As my favorite character in FFX, Auron has taught me about true dedication and commitment to a cause, giving yourself over to larger goals.',
     },
     {
       name: 'Inventiveness',
@@ -60,7 +64,7 @@ export class AboutMeComponent {
     },
   ];
 
-  hobbies = [
+  hobbies: Hobby[] = [
     {
       name: 'Video Games',
       imgUrl:
@@ -71,12 +75,12 @@ export class AboutMeComponent {
         subTitle: 'Connect with me:',
         links: [
           {
-            linkImgUrl: 'src/assets/images/kick.png',
-            anchorUrl: 'https://kick.com/chuckgamestw',
+            linkImgUrl: 'assets/images/kick.png',
+            anchorUrl: 'https://kick.com/chuckgames',
             tooltip: 'Kick Channel',
           },
           {
-            linkImgUrl: 'src/assets/images/twitch.png',
+            linkImgUrl: 'assets/images/twitch.png',
             anchorUrl: 'https://www.twitch.tv/chuckgames9104',
             tooltip: 'Twitch Channel',
           },
@@ -92,18 +96,18 @@ export class AboutMeComponent {
         subTitle: 'My dream bikes:',
         links: [
           {
-            linkImgUrl: 'src/assets/images/yamaha.png',
+            linkImgUrl: 'assets/images/yamaha.png',
             anchorUrl:
               'https://www.incolmotos-yamaha.com.co/vehiculo/wr450f/8418/',
             tooltip: 'Todoterreno WR-450',
           },
           {
-            linkImgUrl: 'src/assets/images/triumph.png',
+            linkImgUrl: 'assets/images/triumph.png',
             anchorUrl: 'https://triumphcolombia.com/motos/tiger-900-rally/',
             tooltip: 'Touring/Offroad Tigger 900',
           },
           {
-            linkImgUrl: 'src/assets/images/arch.png',
+            linkImgUrl: 'assets/images/arch.png',
             anchorUrl: 'https://archmotorcycle.com/arch-krgt-1/',
             tooltip: 'Hand-Made Keanu Reves Motorcycle',
           },
@@ -119,7 +123,7 @@ export class AboutMeComponent {
         subTitle: "Charly's sounds:",
         links: [
           {
-            linkImgUrl: 'src/assets/images/Spotify.png',
+            linkImgUrl: 'assets/images/Spotify.png',
             anchorUrl:
               'https://open.spotify.com/playlist/4mGY2MA3ppUieP7Rytk6xX?si=2e4339c82d064fbe',
             tooltip: 'Spotify playlist for my life soundtrack',
@@ -130,10 +134,12 @@ export class AboutMeComponent {
     {
       name: 'Drawing & Photography',
       imgUrl:
-        'https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       description: 'These topics have always interested me. I discovered in photography and drawing a way to express my emotions and thoughts and let them flow to share them with others. It is a little escape for new scenarios or even for rainy afternoons at home.',
     },
   ];
 
-  toogleFormation() {}
+  toogleFormation(i: number) {
+    this.formationSelected.set(i);
+  }
 }

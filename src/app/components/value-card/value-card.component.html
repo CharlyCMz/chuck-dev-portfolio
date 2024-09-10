@@ -1,0 +1,16 @@
+<div
+  [style.backgroundImage]="'url(' + value?.imgUrl + ')'"
+  class="value-card"
+  (mouseenter)="isHovered = true"
+  (mouseleave)="isHovered = false"
+>
+  <h3 class="img-text">{{ value?.name }}</h3>
+  @if (isHovered) {
+  <p
+    class="p-2 leading-5 font-semibold text-center img-text transition-opacity duration-300"
+    [ngClass]="{ 'opacity-0': !isHovered, 'opacity-100': isHovered }"
+  >
+    {{ value?.description }}
+  </p>
+  }
+</div>

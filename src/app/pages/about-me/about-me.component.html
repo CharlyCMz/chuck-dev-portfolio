@@ -74,7 +74,7 @@
           value="opcion1"
           checked
         />
-        <label for="chem-eng">
+        <label for="chem-eng" (click)="toogleFormation(0)">
           <div
             class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center"
           >
@@ -93,7 +93,7 @@
           name="formation"
           value="opcion2"
         />
-        <label for="soft-dev">
+        <label for="soft-dev" (click)="toogleFormation(1)">
           <div
             class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center"
           >
@@ -112,7 +112,7 @@
           name="formation"
           value="opcion3"
         />
-        <label for="platzi">
+        <label for="platzi" (click)="toogleFormation(2)">
           <div
             class="w-32 h-32 border rounded-lg bg-secondary flex justify-center items-center"
           >
@@ -125,7 +125,7 @@
         ><br />
       </div>
       <div
-        class="mt-4 border rounded border-gray-500 p-2 flex flex-col gap-2 justify-center items-center bg-stone-900 text-center"
+        class="mt-8 p-8 border rounded border-gray-500 flex flex-col gap-2 justify-center items-center bg-stone-900 text-center"
       >
         <h3 class="font-extrabold text-lg">
           {{ studies[formationSelected()].entity }}
@@ -134,7 +134,6 @@
           {{ studies[formationSelected()].title }}
         </p>
         <p class="text-sm">{{ studies[formationSelected()].description }}</p>
-        <p class="text-sm">{{ studies[formationSelected()].story }}</p>
       </div>
     </div>
   </section>
@@ -152,23 +151,9 @@
       </p>
     </div>
     <div class="mt-4 flex gap-8 justify-center">
-      <div id="discipline-value" class="value-card">
-        <h3 class="img-text">Discipline</h3>
-        <p class="p-2 leading-5 font-medium text-center img-text hidden">
-          Como mi personaje favorito en FFX, Auron me ha enseñado sobre la
-          verdadera dedicación y el compromiso con una causa, entregándose a
-          objetivos más grandes.
-        </p>
-      </div>
-      <div id="inventiveness-value" class="value-card">
-        <h3 class="img-text">Inventiveness</h3>
-      </div>
-      <div id="pride-value" class="value-card">
-        <h3 class="img-text">Pride</h3>
-      </div>
-      <div id="tenacity-value" class="value-card">
-        <h3 class="img-text">Tenacity</h3>
-      </div>
+      @for (value of values; track $index) {
+        <app-value-card [value]="value"></app-value-card>
+      }
     </div>
   </section>
   <section
@@ -183,123 +168,9 @@
       </p>
     </div>
     <div class="mt-4 m-auto w-4/5 flex flex-col gap-6 justify-center">
-      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
-        <div
-          id="games-hobbie"
-          class="w-64 h-24 hobbies-img border rounded"
-        ></div>
-        <div class="flex flex-col gap-2 w-4/5">
-          <h3 class="font-bold text-xl">Video Games</h3>
-          <p class="text-sm">
-            Like any 90s kid, I enjoy remembering great moments with my old
-            consoles or trying out the wonders of new games. I like to share
-            this hobby through streaming, feel free to join me in any of my
-            channels!!
-          </p>
-        </div>
-        <div class="w-52 flex flex-col justify-center gap-2 text-center">
-          <h3 class="font-bold text-sm">Connect with me:</h3>
-          <div class="flex justify-center gap-2">
-            <button>
-              <a href="https://kick.com/chuckgames"
-                ><img class="w-10 rounded" src="assets/images/kick.png" alt=""
-              /></a>
-            </button>
-            <button>
-              <a href="https://www.twitch.tv/chuckgames9104"
-                ><img class="w-9" src="assets/images/twitch.png" alt=""
-              /></a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
-        <div
-          id="motorcycles-hobbie"
-          class="w-64 h-24 hobbies-img border rounded"
-        ></div>
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-xl">Motorcycles</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div class="w-52 text-center flex flex-col gap-2">
-          <h3 class="font-bold text-sm">My Dream Bikes:</h3>
-          <div class="flex justify-center gap-2">
-            <button>
-              <a href=""
-                ><img
-                  src="assets/images/yamaha.png"
-                  class="w-9 rounded-md"
-                  alt=""
-              /></a>
-            </button>
-            <button>
-              <a href=""
-                ><img
-                  src="assets/images/triumph.png"
-                  class="w-9 rounded-md"
-                  alt=""
-              /></a>
-            </button>
-            <button>
-              <a href=""
-                ><img
-                  src="assets/images/arch.png"
-                  class="w-8 rounded-md"
-                  alt=""
-              /></a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
-        <div
-          id="guitar-hobbie"
-          class="w-64 h-24 hobbies-img border rounded"
-        ></div>
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-xl">Guitar</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div class="w-52 flex flex-col justify-center gap-2">
-          <h3 class="font-bold text-sm">Charly's Sounds:</h3>
-          <div class="flex justify-center gap-2">
-            <button>
-              <a href=""
-                ><img src="assets/images/Spotify.png" class="w-9" alt=""
-              /></a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
-        <div
-          id="draw-hobbie"
-          class="w-64 h-24 hobbies-img border rounded"
-        ></div>
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-xl">Drawing & Photography</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div class="w-52">
-          <h3 class="font-bold text-sm">Connect with me:</h3>
-          <div>
-            <a href=""
-              ><img src="assets/images/twitch.jpg" class="w-10" alt=""
-            /></a>
-            <a href=""></a>
-          </div>
-        </div>
-      </div>
+      @for (hobby of hobbies; track $index) {
+        <app-hobby-card [hobby]="hobby"></app-hobby-card>
+      }
     </div>
   </section>
 </div>

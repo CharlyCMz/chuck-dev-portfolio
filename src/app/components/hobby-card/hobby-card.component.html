@@ -1,0 +1,19 @@
+<div class="p-4 border rounded border-gray-500 flex gap-4 items-center">
+  <div [style.backgroundImage]="'url('+hobby?.imgUrl+')'" class="w-64 h-24 hobbies-img border rounded"></div>
+  <div class="flex flex-col gap-2 w-4/5">
+    <h3 class="font-bold text-xl">{{ hobby?.name }}</h3>
+    <p class="text-sm">{{ hobby?.description }}</p>
+  </div>
+  <div class="w-52 flex flex-col justify-center gap-2 text-center">
+    <h3 class="font-bold text-sm">{{ hobby?.extra?.subTitle }}</h3>
+    <div class="flex justify-center gap-2">
+      @for (link of hobby?.extra?.links; track $index) {
+      <button>
+        <a [href]="link.anchorUrl"
+          ><img class="w-10 rounded" [src]="link.linkImgUrl"
+        /></a>
+      </button>
+      }
+    </div>
+  </div>
+</div>
